@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiContainer-root {
+  margin-top: 1em;
+}
+
+ul {
+  columns: 4;
+  -webkit-columns: 4;
+  -moz-columns: 4;
+}
+li:nth-child(odd) { background: #e9f5f9; }
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+  }
+}

@@ -12,7 +12,7 @@ function MainAppBar() {
     let navigate = useNavigate();
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="static" style={{ background: '#2E3B55' }}>
                 <Toolbar>
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         React Dev
