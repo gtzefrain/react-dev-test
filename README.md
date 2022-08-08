@@ -5,7 +5,7 @@ Doorvel Code Test
 
 You can check a full run here https://imgur.com/QuMIULu
 
-Uses React-router-dom for routing, RecoilJS for state management and Material UI for UX components.
+Uses [React-router-dom](https://v5.reactrouter.com/web/guides/quick-start) for routing, [RecoilJS](https://recoiljs.org/) for state management and [Material UI](https://mui.com/) for UX components.
 
 `npm install && npm start` to run the local server.
 
