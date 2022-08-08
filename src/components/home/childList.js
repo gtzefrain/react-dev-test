@@ -1,19 +1,19 @@
 import React from 'react';
-import List from '@mui/material/List';
-import ListItemText from '@mui/material/ListItemText';
-import ListItem from '@mui/material/ListItem';
+import { 
+    List, 
+    ListItem
+} from '@mui/material';
 
 export function ChildList({ list, current }) {
     const results = list.filter(x => x.property_category == current);
-    console.log('results', results);
 
     return (
-        <ul>
+        <List >
             {results.map((result) => (
-                <li key={result.id}>
+                <ListItem sx={{ display: 'list-item' }} key={result.id}>
                     {result.name}
-                </li>
+                </ListItem>
             ))}
-        </ul>
+        </List>
     )
 }

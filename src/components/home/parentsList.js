@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import Collapse from '@mui/material/Collapse';
-import List from '@mui/material/List';
-import ListItemText from '@mui/material/ListItemText';
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import ListItemButton from '@mui/material/ListItemButton';
+import React from 'react';
+import {
+    Collapse,
+    List,
+    ListItemButton,
+    ListItemText,
+    Typography
+} from '@mui/material';
+import { ExpandLess, ExpandMore } from '@mui/icons-material';
 import { useRecoilState, useRecoilValue } from 'recoil';
 import { useNavigate } from "react-router-dom";
 import { parentsState } from '../../states/parentsState';
@@ -36,7 +38,10 @@ export function ParentsList() {
             {parents.data.map((parent, idx) => (
                 <React.Fragment key={parent.id}>
                     <ListItemButton onClick={() => handleClick(parent.id)} divider>
-                        <ListItemText primary={parent.name} />
+                        <ListItemText
+                            disableTypography
+                            primary={<Typography variant="h6">{parent.name}</Typography>}
+                        />
                         {selectedParentID == parent.id ? <ExpandLess /> : <ExpandMore />}
                     </ListItemButton>
                     <Collapse in={selectedParentID == parent.id} timeout="auto" unmountOnExit>
